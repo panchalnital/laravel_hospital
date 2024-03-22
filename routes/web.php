@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Jobs\SendEmailJob;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,4 +51,10 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     //Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
+});
+
+Route::get('/sendmail',function(){
+    $userMail="panchalnital5@gmail.com";
+    SendEmailJob::dispatch($userMail);
+    dd('Send mail successuly!');
 });
