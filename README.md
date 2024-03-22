@@ -44,6 +44,7 @@ A Hospital Management System (HMS) typically consists of several modules that ca
 9. **Reporting and Analytics Module**:
    - Generate various reports such as patient statistics, financial reports, inventory status, etc.
    - Data visualization tools for analyzing trends and patterns.
+   
    - Compliance reporting for regulatory requirements.
 
 10. **Security and Access Control Module**:
